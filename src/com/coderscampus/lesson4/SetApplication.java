@@ -11,6 +11,8 @@ public class SetApplication {
 	// LinkedHashSet - Keeps order, does not allow duplicates
 	// HashSet - Does not keep order, does not allow duplicates
 	
+	// NEW COMMENT
+	
 	public static void main(String[] args) {
 		Set<Integer> uniqueNumbers = new LinkedHashSet<>();
 		System.out.println(uniqueNumbers.add(1));
