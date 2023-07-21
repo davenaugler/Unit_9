@@ -14,16 +14,21 @@ public class SetApplication {
 	// NEW COMMENT
 	
 	public static void main(String[] args) {
+//      Set<define data type stored in set> variableName = initializeObject LinkedHashSet<>();
+// 	    Can not use Set, because it's an interface, you need to choose one of it's concrete
+//      classes that implement that interface
 		Set<Integer> uniqueNumbers = new LinkedHashSet<>();
-		System.out.println(uniqueNumbers.add(1));
-		System.out.println(uniqueNumbers.add(2));
-		System.out.println(uniqueNumbers.add(3));
-		System.out.println(uniqueNumbers.add(4));
-		System.out.println(uniqueNumbers.add(5));
-		System.out.println(uniqueNumbers.add(6));
-		System.out.println(uniqueNumbers.add(1));
-		System.out.println(uniqueNumbers.add(2));
-		System.out.println(uniqueNumbers.add(3));
+		
+		System.out.println(uniqueNumbers.add(1)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(2)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(3)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(4)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(5)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(6)); // true, because it's not a duplicate
+		System.out.println(uniqueNumbers.add(1)); // false, because it is a duplicate
+		System.out.println(uniqueNumbers.add(2)); // false, because it is a duplicate
+		System.out.println(uniqueNumbers.add(3)); // false, because it is a duplicate
+		System.out.println(uniqueNumbers.add(7)); // true, because it's not a duplicate
 		printSetToConsole(uniqueNumbers);
 		
 		Set<String> uniqueNames = new HashSet<>(); 
