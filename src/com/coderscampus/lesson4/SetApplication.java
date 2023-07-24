@@ -5,6 +5,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.coderscampus.lesson7.Person;
+
 public class SetApplication {
 
 	// [ Sets are like lists, except there are no duplicates ]
@@ -17,6 +19,14 @@ public class SetApplication {
 //      Set<define data type stored in set> variableName = initializeObject LinkedHashSet<>();
 // 	    Can not use Set, because it's an interface, you need to choose one of it's concrete
 //      classes that implement that interface
+		Set<Person> people = new HashSet<>();
+		people.add(new Person(111111111, "Dave", "Naugler"));
+		
+//		example1();
+		
+	}
+
+	private static void example1() {
 		Set<Integer> uniqueNumbers = new LinkedHashSet<>();
 		
 		System.out.println(uniqueNumbers.add(1)); // true, because it's not a duplicate
@@ -39,7 +49,6 @@ public class SetApplication {
 		uniqueNames.add("Elon Musk");
 		uniqueNames.add("Addison Naugler");
 		printNameSetToConsole(uniqueNames);
-		
 	}
 	
 	private static void printNameSetToConsole(Set<String> names) {
