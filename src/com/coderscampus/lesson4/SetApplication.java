@@ -21,6 +21,10 @@ public class SetApplication {
 //      classes that implement that interface
 		Set<Person> people = new HashSet<>();
 		people.add(new Person(111111111, "Dave", "Naugler"));
+		people.add(new Person(111111111, "Dave", "Naugler"));
+		for (Person person : people) {
+			System.out.println(person.toString());
+		}
 		
 //		example1();
 		
