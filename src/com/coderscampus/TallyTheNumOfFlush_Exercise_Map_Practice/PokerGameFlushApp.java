@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class PokerGameFlushApp {
 	
-	static Map<String, String> hands = new HashMap<>();
+	static Map<String, Integer> flushes = new HashMap<>();
 
 	public static void main(String[] args) {
-		Map<String, String> hands = extractDataFromCSV("PokerHands.csv");
+		Map<String, Integer> flushes = extractDataFromCSV("PokerHands.csv");
 //		for (String player : hands.values()) {
 //			System.out.println(player.toString());
 //		}
@@ -16,12 +16,12 @@ public class PokerGameFlushApp {
 		
 	}
 	
-	private static Map<String, String> extractDataFromCSV(String fileName) {
+	private static Map<String, Integer> extractDataFromCSV(String fileName) {
 		FileService fileService = new FileService();
 		return fileService.readFile(fileName);
 	}
 	
-	private static void printToConsole(Map<String, String> hands) {
+	private static void printToConsole(Map<String, Integer> hands) {
 		System.out.println(hands.get(hands));
 		
 //		for (String hand : hands) {

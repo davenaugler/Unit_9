@@ -12,10 +12,11 @@ public class FileService {
 	// Value = # of 'Flush's'
 	// Does a Royal Flush count towards the count?
 
-	public Map<String, String> readFile(String fileName) {
-		Map<String, String> hands = new HashMap<>();
+	public Map<String, Integer> readFile(String fileName) {
+		Map<String, Integer> flushes = new HashMap<>();
 		boolean isFirstLine = true;
-		int flushes = 0;
+//		int flushes = 0;
+		int numOfFlushes = 0;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line;
@@ -31,22 +32,31 @@ public class FileService {
 //					System.out.println(playerName);
 				String winningHand = playerInfo[1].trim();
 //					System.out.println(winningHand);
-				Player player = new Player(playerName, winningHand, flushes);
+				Player player = new Player(playerName, winningHand, numOfFlushes);
 				System.out.println(player.toString());
 //					hands.put(playerName, winningHand);
-				if (winningHand.equals("FLUSH")) {
-					if (hands.containsKey(playerName)) {
-						flushes = flushes + 1;
-						
+				
+				if(flushes.equals("FLUSH")) {
+					if (flushes.containsKey(playerName)) {
+						int currentFlushes = flushes.get(playerName);
+						flushes.put(playerName, numOfFlushes + 1);
+					} else {
+						flushes.put(playerName, 1);
 					}
-					
 				}
-				
-				
-				
-				
-				
-				hands.put(playerName, winningHand);
+
+//				if (winningHand.contentEquals("FLUSH")) {
+//					if (hands.containsValue(playerName)) {
+//						flushes += 1;
+//						numOfFlushes = flushes;
+//					} else {
+//						hands.put(playerName, winningHand);
+//						flushes += 1;
+//						player = 
+//						numOfFlushes = flushes;
+//					}
+//				}
+				System.out.println(player);
 				
 
 //				}
@@ -57,7 +67,7 @@ public class FileService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return hands;
+		return flushes;
 
 	}
 

@@ -18,7 +18,7 @@ public class Player extends PokerGameFlushApp {
 	public void setPlayer(String playerName) {
 		this.playerName = playerName;
 	}
-
+	
 	public String getWinningHand() {
 		return winningHand;
 	}
@@ -37,8 +37,11 @@ public class Player extends PokerGameFlushApp {
 
 	@Override
 	public String toString() {
-		return "Player [playerName=" + playerName + ", winningHand=" + winningHand + "]";
+		return "Player [playerName=" + playerName + ", numOfFlushes=" + numOfFlushes
+				+ "]";
 	}
+
+	
 	
 	
 
