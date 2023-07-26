@@ -3,16 +3,12 @@ package com.coderscampus.TallyTheNumOfFlush_Exercise_Map_Practice;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
 public class FileService {
-
-	// Key = Player Name
-	// Value = # of 'Flush's'
-	// Does a Royal Flush count towards the count?
+	// Key = playerName
+	// Value = # of Flush's
 
 	public Map<String, Integer> readFile(String fileName) {
 		Map<String, Integer> flushTally = new HashMap<>();

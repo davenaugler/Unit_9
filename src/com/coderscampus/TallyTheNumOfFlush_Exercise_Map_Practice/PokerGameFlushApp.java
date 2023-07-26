@@ -13,6 +13,9 @@ public class PokerGameFlushApp {
 		
 		updateValue(flushTally, "He Man", 1);
 		printToConsole(flushTally);
+		
+		removePlayer(flushTally, "He Man");
+		printToConsole(flushTally);
 
 	}
 
@@ -36,9 +39,10 @@ public class PokerGameFlushApp {
 	private static void updateValue(Map<String, Integer> flushTally, String playerName, Integer value) {
 		int currentFlushes = flushTally.get(playerName);
 		flushTally.put(playerName, currentFlushes + 1);
-		
-//		flushTally.get(playerName);
-//		flushTally.put(playerName, value + value);
+	}
+	
+	private static void removePlayer(Map<String, Integer> flushTally, String playerName) {
+		flushTally.remove(playerName);
 	}
 
 }

@@ -41,8 +41,4 @@ public class Player extends PokerGameFlushApp {
 				+ "]";
 	}
 
-	
-	
-	
-
 }
