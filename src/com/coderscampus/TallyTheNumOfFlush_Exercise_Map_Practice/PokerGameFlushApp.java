@@ -3,17 +3,14 @@ package com.coderscampus.TallyTheNumOfFlush_Exercise_Map_Practice;
 import java.util.Map;
 
 public class PokerGameFlushApp {
-	
-//	static Map<String, Integer> flushes = new HashMap<>();
 
 	public static void main(String[] args) {
-		Map<String, Integer> flushTally = extractDataFromCSV("PokerHands.csv");
-//		for (String player : hands.values()) {
-//			System.out.println(player.toString());
-//		}
-//		printToConsole(hands);
-		
+		Map<String, Integer> flushTally = extractDataFromCSV("PokerHands.csv");		
 		printToConsole(flushTally);
+		
+		updateCard(flushTally, "Rita Repulsa", "Zordon");
+		printToConsole(flushTally);
+		
 		
 		
 		
@@ -28,6 +25,12 @@ public class PokerGameFlushApp {
 		for (Map.Entry<String, Integer> entry : flushTally.entrySet()) {
 			System.out.println(entry.getKey() + " -> " + entry.getValue());
 		}
+		System.out.println("");
+	}
+	
+	private static void updateCard(Map<String, Integer> flushTally, String playerName, String newPlayerName) {
+		flushTally.put(newPlayerName, flushTally.get(playerName));
+        flushTally.remove(playerName);
 	}
 
 }
