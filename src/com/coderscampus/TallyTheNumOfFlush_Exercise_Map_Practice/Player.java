@@ -2,12 +2,12 @@ package com.coderscampus.TallyTheNumOfFlush_Exercise_Map_Practice;
 
 public class Player extends PokerGameFlushApp {
 	private String playerName;
-	private String winningHand;
+	private String hand;
 	private Integer numOfFlushes;
 
-	public Player(String playerName, String winningHand, Integer numOfFlushes) {
+	public Player(String playerName, String hand, Integer numOfFlushes) {
 		this.playerName = playerName;
-		this.winningHand = winningHand;
+		this.hand = hand;
 		this.numOfFlushes = numOfFlushes;
 	}
 
@@ -19,12 +19,12 @@ public class Player extends PokerGameFlushApp {
 		this.playerName = playerName;
 	}
 	
-	public String getWinningHand() {
-		return winningHand;
+	public String getHand() {
+		return hand;
 	}
 
-	public void setWinningHand(String winningHand) {
-		this.winningHand = winningHand;
+	public void setHand(String hand) {
+		this.hand = hand;
 	}
 	
 	public Integer getNumOfFlushes() {

@@ -3,6 +3,8 @@ package com.coderscampus.TallyTheNumOfFlush_Exercise_Map_Practice;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,37 +15,44 @@ public class FileService {
 	// Does a Royal Flush count towards the count?
 
 	public Map<String, Integer> readFile(String fileName) {
-		Map<String, Integer> flushes = new HashMap<>();
-		boolean isFirstLine = true;
-//		int flushes = 0;
-		int numOfFlushes = 0;
+		Map<String, Integer> flushTally = new HashMap<>();
+		boolean skipHeader = true;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line;
 			while ((line = br.readLine()) != null) {
-				if (isFirstLine) {
-					isFirstLine = false;
+				if (skipHeader) {
+					skipHeader = false;
 					continue;
 				}
-
-				String[] playerInfo = line.split(",");
-//				if (playerInfo.length == 2) {
-				String playerName = playerInfo[0].trim();
-//					System.out.println(playerName);
-				String winningHand = playerInfo[1].trim();
-//					System.out.println(winningHand);
-				Player player = new Player(playerName, winningHand, numOfFlushes);
-				System.out.println(player.toString());
-//					hands.put(playerName, winningHand);
+				String[] cardInfo = line.split(",");
+				String playerName = cardInfo[0].trim();
+				String hand = cardInfo[1].trim();
 				
-				if(flushes.equals("FLUSH")) {
-					if (flushes.containsKey(playerName)) {
-						int currentFlushes = flushes.get(playerName);
-						flushes.put(playerName, numOfFlushes + 1);
+				if ("FLUSH".equalsIgnoreCase(hand)) {
+					if (flushTally.containsKey(playerName)) {
+						int currentFlushes = flushTally.get(playerName);
+						flushTally.put(playerName, currentFlushes + 1);
 					} else {
-						flushes.put(playerName, 1);
+						flushTally.put(playerName, 1);
 					}
 				}
+				
+//				System.out.println(flushTally);
+				
+
+//				Player player = new Player(playerName, hand, numOfFlushes);
+//				System.out.println(player.toString());
+//					hands.put(playerName, winningHand);
+				
+//				if(flushTally.equals("FLUSH")) {
+//					if (flushTally.containsKey(playerName)) {
+//						int currentFlushes = flushTally.get(playerName);
+//						flushTally.put(playerName, currentFlushes + 1);
+//					} else {
+//						flushTally.put(playerName, 1);
+//					}
+//				}
 
 //				if (winningHand.contentEquals("FLUSH")) {
 //					if (hands.containsValue(playerName)) {
@@ -56,18 +65,19 @@ public class FileService {
 //						numOfFlushes = flushes;
 //					}
 //				}
-				System.out.println(player);
+//				System.out.println(player);
 				
 
 //				}
 
 			}
+//			br.close();
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return flushes;
+		return flushTally;
 
 	}
 
