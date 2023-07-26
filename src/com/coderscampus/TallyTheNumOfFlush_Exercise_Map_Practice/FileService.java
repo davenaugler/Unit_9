@@ -9,6 +9,11 @@ import java.util.Map;
 public class FileService {
 	// Key = playerName
 	// Value = # of Flush's
+	
+	// Keeping comments so that I can come back and revisit how I thought I should have coded
+	// out the logic in the FileService originally, vs. how it turned out to be correctly coded out.
+	// I want to take time to sit down and step through my logic and take more time to see where
+	// I went wrong, and then revisit my course correction. 
 
 	public Map<String, Integer> readFile(String fileName) {
 		Map<String, Integer> flushTally = new HashMap<>();
