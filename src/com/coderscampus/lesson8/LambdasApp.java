@@ -21,12 +21,12 @@ public class LambdasApp {
 		Collections.sort(names);
 		printArrayListToConsole(names);
 		
+		// Sort in Deceding order
 		Collections.sort(names, new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {
 				return o2.compareTo(o1);
 			}
-			
 		});
 		printArrayListToConsole(names);
 		
