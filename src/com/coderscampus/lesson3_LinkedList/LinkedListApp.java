@@ -1,4 +1,4 @@
-package com.coderscampus.lesson3;
+package com.coderscampus.lesson3_LinkedList;
 
 import java.util.LinkedList;
 import java.util.List;

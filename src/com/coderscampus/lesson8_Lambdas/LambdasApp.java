@@ -1,4 +1,4 @@
-package com.coderscampus.lesson8;
+package com.coderscampus.lesson8_Lambdas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +21,7 @@ public class LambdasApp {
 		Collections.sort(names);
 		printArrayListToConsole(names);
 		
-		// Sort in Deceding order
+		// Sort in Descending order
 		Collections.sort(names, new Comparator<String>() {
 			@Override
 			public int compare(String o1, String o2) {
@@ -29,13 +29,7 @@ public class LambdasApp {
 			}
 		});
 		printArrayListToConsole(names);
-		
-		
-		
-		
-		
-		
-		
+				
 		
 	}
 	

@@ -1,11 +1,11 @@
-package com.coderscampus.lesson4;
+package com.coderscampus.lesson4_Sets;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.coderscampus.lesson7.Person;
+import com.coderscampus.lesson7_HashCode_and_Equals.Person;
 
 public class SetApplication {
 

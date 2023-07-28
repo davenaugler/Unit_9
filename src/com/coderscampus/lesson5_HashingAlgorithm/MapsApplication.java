@@ -1,4 +1,4 @@
-package com.coderscampus.lesson5;
+package com.coderscampus.lesson5_HashingAlgorithm;
 
 import java.util.HashMap;
 import java.util.Map;
