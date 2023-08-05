@@ -29,6 +29,13 @@ public class LambdasApp {
 				return name2.compareTo(name1);
 			}
 		});
+		
+		// What is a Lambda?
+		// Lambdas can only be used with a Functional Interface (Functional Interface annotation) and defines only one 
+		// abstract method inside of it. Once that's in place it opens up some really poweful things.
+		// A Lambda is a method signature to the left of an arrow '->' and potentially
+		// a full block of code to the right or a more succinct version which is just a return statement to the right.
+		// 
 
 		// Example 1 of Lambdas (more verbose)
 		// Start off with what you are comparing -> Then tell what you are returning
