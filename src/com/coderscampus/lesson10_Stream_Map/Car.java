@@ -7,8 +7,8 @@ public class Car {
 	private String trim;
 	private String color;
 	private Integer year;
-	
-	public Car (String brand, String model, String trim, String color, Integer year) {
+
+	public Car(String brand, String model, String trim, String color, Integer year) {
 		this.brand = brand;
 		this.model = model;
 		this.trim = trim;
@@ -31,7 +31,7 @@ public class Car {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	
+
 	public String getTrim() {
 		return trim;
 	}
@@ -104,7 +104,5 @@ public class Car {
 			return false;
 		return true;
 	}
-
-	
 
 }
