@@ -6,6 +6,8 @@ public class GroupingDataWithStreamsApp {
 		// Comment one - commit #1
 		
 		// Comment two - commit #2
+		
+		// Comment three - commit #3
 	}
 
 }
