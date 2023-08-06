@@ -1,4 +1,4 @@
-package com.coderscampus.lesson1;
+package com.coderscampus.lesson1_lesson2_Array_vs_ArrayList;
 
 import java.util.ArrayList;
 import java.util.List;

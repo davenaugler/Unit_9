@@ -11,8 +11,11 @@ public class GroupingDataWithStreamsApp {
 		
 		// Comment four - commit #4
 		// Get everything on main and see if the commits populate accordingly
+<<<<<<< HEAD
 		
 		// commit #5
+=======
+>>>>>>> dev
 	}
 
 }
