@@ -1,4 +1,4 @@
-package com.coderscampus.ToDoApp_Exercise_ArrayList_Practice;
+package com.coderscampus.B__Exercise_1_ArrayList_Practice;
 
 import java.util.ArrayList;
 import java.util.List;

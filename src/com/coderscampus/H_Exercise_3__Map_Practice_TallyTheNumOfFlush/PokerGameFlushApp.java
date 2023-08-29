@@ -1,4 +1,4 @@
-package com.coderscampus.TallyTheNumOfFlush_Exercise_Map_Practice;
+package com.coderscampus.H_Exercise_3__Map_Practice_TallyTheNumOfFlush;
 
 import java.util.Map;
 

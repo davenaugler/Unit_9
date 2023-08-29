@@ -1,8 +1,8 @@
-package com.coderscampus.lesson7_HashCode_and_Equals;
+package com.coderscampus.G_Lesson7__HashCode_and_Equals;
 
 import java.util.Objects;
 
-import com.coderscampus.lesson4_Sets.SetApplication;
+import com.coderscampus.D_Lesson4__Sets.SetApplication;
 
 public class Person extends SetApplication {
 	private Integer ssn;

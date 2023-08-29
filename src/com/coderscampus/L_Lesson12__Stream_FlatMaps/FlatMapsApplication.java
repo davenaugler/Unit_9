@@ -1,4 +1,4 @@
-package com.coderscampus.lesson12_Stream_FlatMaps;
+package com.coderscampus.L_Lesson12__Stream_FlatMaps;
 
 import java.util.ArrayList;
 import java.util.Arrays;

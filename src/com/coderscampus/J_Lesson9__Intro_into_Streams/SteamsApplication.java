@@ -1,4 +1,4 @@
-package com.coderscampus.lesson9_Intro_into_Streams;
+package com.coderscampus.J_Lesson9__Intro_into_Streams;
 
 import java.util.ArrayList;
 import java.util.List;

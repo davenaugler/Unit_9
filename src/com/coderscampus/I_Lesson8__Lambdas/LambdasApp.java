@@ -1,4 +1,4 @@
-package com.coderscampus.lesson8_Lambdas;
+package com.coderscampus.I_Lesson8__Lambdas;
 
 import java.util.ArrayList;
 import java.util.Arrays;
