@@ -1,4 +1,4 @@
-package com.coderscampus.lesson10_StreamMap_lesson11_StreamJoining;
+package com.coderscampus.K_Lesson10__StreamMap_and_Lesson11__StreamJoining;
 
 public class Car {
 
@@ -54,6 +54,13 @@ public class Car {
 
 	public void setYear(Integer year) {
 		this.year = year;
+	}
+	
+
+	@Override
+	public String toString() {
+		return "Car [brand=" + brand + ", model=" + model + ", trim=" + trim + ", color=" + color + ", year=" + year
+				+ "]";
 	}
 
 	@Override

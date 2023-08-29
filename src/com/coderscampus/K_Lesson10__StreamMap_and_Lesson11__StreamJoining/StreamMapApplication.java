@@ -1,4 +1,4 @@
-package com.coderscampus.lesson10_StreamMap_lesson11_StreamJoining;
+package com.coderscampus.K_Lesson10__StreamMap_and_Lesson11__StreamJoining;
 
 import java.util.ArrayList;
 import java.util.HashSet;
