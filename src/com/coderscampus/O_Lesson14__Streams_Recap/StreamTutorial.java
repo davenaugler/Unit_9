@@ -12,8 +12,11 @@ public class StreamTutorial {
 		List<Person> people = new ArrayList<>();
 		populatePeopleDate(people);
 		
-		people.stream()
-			  .forEach(System.out::println);
+		people.stream() // Stream of Lists of Person objects | Stream<List<Person>>
+						// as many intermediate operations: Examples are filter, map, flatMap, distinct
+			   .filter(person -> person.getSsn() >= 10)
+			  
+			  .forEach(System.out::println); // One terminating/terminal operations: Examples are forEach, Collect, Reduce 
 	}
 
 	private static void populatePeopleDate(List<Person> people) {

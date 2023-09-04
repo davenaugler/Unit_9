@@ -26,7 +26,10 @@ public class GroupingDataWithStreamsApp {
 		
 		Map<String, List<Car>> groupedByBrand = cars.stream()
 		    .collect(Collectors.groupingBy((car) -> car.getBrand()));
-		System.out.println(groupedByBrand.toString());
+		System.out.println(groupedByBrand);
+		
+		
+		
 		
 		// How to iterate through a hashmap using a stream
 		// Set - a set is an interface that's a list that does not contain duplicates
