@@ -18,6 +18,7 @@ public class StreamTutorial {
 		// If we were not using Streams
 		// The code below is how we'd code it out
 		List<Person> intermediateList = new ArrayList<>(); // Create new List of 'Person' objects and set the variable name to 'intermediateList', aka 'intermediateList' will hold a list of 'Person' objects.
+		List<String> intermediateList2 = new ArrayList<>();
 		for(Person person : people) { // For each iteration a single 'people', objects of type 'Person', is assigned to 'person' variable.
 			if (person.getSsn() >= 10) { // if loop (like the filter in Streams). If person's SSN is greater than or equal to 10
 				intermediateList.add(person); // Add that person to intermediateList
@@ -28,8 +29,6 @@ public class StreamTutorial {
 			System.out.println(person); // For each 'Person' object in 'intermediateList', Print the 'person' object to the console
 		}
 		
-	
-		
 		
 		System.out.println("");
 		
@@ -38,7 +37,7 @@ public class StreamTutorial {
 		people.stream() // Stream of Lists of Person objects | Stream<List<Person>>
 						// as many intermediate operations: Examples are filter, map, flatMap, distinct
 			   .filter(person -> person.getSsn() >= 10)
-			  
+			   .map(person -> person.getFirstName())
 			  .forEach(System.out::println); // One terminating/terminal operations: Examples are forEach, Collect, Reduce 
 	}
 
